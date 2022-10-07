@@ -1,22 +1,22 @@
-import { reportData } from '../../services/hooks/useData';
-import { Container } from './styles';
-import pdfMaker from 'pdfmake/build/pdfmake';
-import pdfFonts from 'pdfmake/build/vfs_fonts';
-import { TDocumentDefinitions } from 'pdfmake/interfaces';
-import { base64 } from '../../services/img';
+import { reportData } from '../../services/hooks/useData'
+import { Container } from './styles'
+import pdfMaker from 'pdfmake/build/pdfmake'
+import pdfFonts from 'pdfmake/build/vfs_fonts'
+import { TDocumentDefinitions } from 'pdfmake/interfaces'
+import { base64 } from '../../services/img'
 
 interface BtnExportPdfProps {
-  pdfData: reportData;
+  pdfData: reportData
 }
 
 export function BtnExportPdf({ pdfData }: BtnExportPdfProps) {
-  pdfMaker.vfs = pdfFonts.pdfMake.vfs;
+  pdfMaker.vfs = pdfFonts.pdfMake.vfs
 
   const descontos = [
     { value: pdfData.resumo.descontos.fgts },
     { value: pdfData.resumo.descontos.inss },
     { value: pdfData.resumo.descontos.irt },
-  ];
+  ]
 
   let descRows = descontos.map((row) => {
     return [
@@ -42,14 +42,14 @@ export function BtnExportPdf({ pdfData }: BtnExportPdfProps) {
         colSpan: 2,
       },
       {},
-    ];
-  });
+    ]
+  })
 
   const proventos = [
     { value: pdfData.resumo.proventos.subAlimentacao },
     { value: pdfData.resumo.proventos.subTransporte },
     { value: pdfData.resumo.proventos.outros },
-  ];
+  ]
 
   let provRows = proventos.map((row) => {
     return [
@@ -75,8 +75,8 @@ export function BtnExportPdf({ pdfData }: BtnExportPdfProps) {
         colSpan: 2,
       },
       {},
-    ];
-  });
+    ]
+  })
 
   const documentDefinitions: TDocumentDefinitions = {
     pageSize: 'A4',
@@ -84,7 +84,7 @@ export function BtnExportPdf({ pdfData }: BtnExportPdfProps) {
     compress: false,
     content: [
       {
-        image: `https://images.unsplash.com/photo-1656612955227-b6f747fa888d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60`,
+        image: `data:image/png;base64,${base64.brh}`,
         width: 100,
       },
       { text: `NIF ${pdfData.nif}`, bold: true, margin: [0, 0, 0, 15] },
@@ -420,7 +420,7 @@ export function BtnExportPdf({ pdfData }: BtnExportPdfProps) {
           ],
         },
       },
-    ],    
+    ],
 
     styles: {
       headerText: {
@@ -437,13 +437,13 @@ export function BtnExportPdf({ pdfData }: BtnExportPdfProps) {
         fillColor: '#eee',
       },
     },
-  };
+  }
 
   const downloadPdf = () => {
     pdfMaker
       .createPdf(documentDefinitions)
-      .download(`${pdfData.nome}-Cod.${pdfData.codigo}.pdf`);
-  };
+      .download(`${pdfData.nome}-Cod.${pdfData.codigo}.pdf`)
+  }
 
   return (
     <Container>
@@ -451,5 +451,5 @@ export function BtnExportPdf({ pdfData }: BtnExportPdfProps) {
         PDF
       </button>
     </Container>
-  );
+  )
 }

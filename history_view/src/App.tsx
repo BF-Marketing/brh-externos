@@ -1,6 +1,7 @@
 import { Timeline } from './components/timeline/timeline'
 import rings from './assets/rings.svg'
 import office from './assets/office.svg'
+import { SalaryChart } from './components/charts/salary'
 
 function App() {
   return (
@@ -9,8 +10,7 @@ function App() {
         <Timeline history={data} />
       </div>
       <div className="container">
-        <p>button</p>
-        <p>button</p>
+        <SalaryChart />
       </div>
     </div>
   )

@@ -1,0 +1,105 @@
+.timeline {
+  position: relative;
+  background: white;
+  width: 100%;
+  max-width: 800px;
+}
+.container ol {
+  margin: 390px 0;
+  padding: 0;
+  border-top: 2px solid #aaa;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.container ol li {
+  float: left;
+  min-width: 80px;
+  padding-top: 30px;
+  position: relative;
+}
+.container ol li span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: 48%;
+  z-index: 2;
+}
+
+.container ol li span:nth-child(2n + 1) {
+  background-color: green;
+}
+
+.span-top:before {
+  content: '';
+  width: 2px;
+  height: 50px;
+  background: #aaa;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+}
+
+.span-top:after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: #aaa;
+  position: absolute;
+  bottom: 58px;
+  left: 48%;
+  border-radius: 100%;
+}
+
+.span-bot:before {
+  content: '';
+  width: 2px;
+  height: 140px;
+  background: #aaa;
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+}
+
+.span-bot:after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: #aaa;
+  position: absolute;
+  top: 86px;
+  left: 40%;
+  border-radius: 100%;
+}
+
+.img-handler {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 85px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.img-handler img {
+  margin: 0 auto;
+  width: 3rem;
+}
+
+p {
+  text-align: center;
+  font-size: 1em;
+  width: 100%;
+}
+
+.p-bot {
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.ps-bot {
+  position: absolute;
+}

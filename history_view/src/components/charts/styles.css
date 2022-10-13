@@ -2,3 +2,13 @@
   width: 100%;
   max-width: 600px;
 }
+
+.salary-section-title {
+  font-weight: bold;
+  font-size: 1em;
+}
+.salary-section-title span {
+  font-weight: bold;
+  font-size: 1em;
+  text-transform: capitalize;
+}

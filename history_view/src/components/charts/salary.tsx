@@ -1,18 +1,23 @@
 import Chart from 'react-apexcharts'
+import './styles.css'
 
 type salaryChartProps = {
   data: {
-    event: string
-    label: string
-    year: number
-    icon: string
-    value: number
-  }[]
+    name: string
+    admissionDate: Date
+    salaryMovement: {
+      event: string
+      label: string
+      value: number
+      year: number
+      icon: string
+    }[]
+  }
 }
+
 export const SalaryChart = ({ data }: salaryChartProps) => {
-  let year = data.map((arr) => arr.year)
-  let value = data.map((arr) => arr.value)
-  console.log(year, value)
+  let year = data.salaryMovement.map((arr) => arr.year)
+  let values = data.salaryMovement.map((arr) => arr.value)
   let options = {
     chart: {
       id: 'basic-bar',
@@ -23,7 +28,7 @@ export const SalaryChart = ({ data }: salaryChartProps) => {
     series: [
       {
         name: 'salary',
-        data: value,
+        data: values,
       },
     ],
     markers: {
@@ -37,7 +42,10 @@ export const SalaryChart = ({ data }: salaryChartProps) => {
   }
 
   return (
-    <div className="container">
+    <div className="content">
+      <p className="salary-section-title">
+        Evolução Salarial de {<span>{data.name}</span>}
+      </p>
       <Chart
         options={options}
         series={options.series}

@@ -1,12 +1,22 @@
 import './styles.css'
 type timelineProps = {
-  history: { event: string; label: string; year: number; icon: string }[]
+  history: {
+    name: string
+    admissionDate: Date
+    salaryMovement: {
+      event: string
+      label: string
+      value: number
+      year: number
+      icon: string
+    }[]
+  }
 }
 export const Timeline = ({ history }: timelineProps) => {
   return (
     <div className="timeline">
       <ol>
-        {history.map((item, index) => {
+        {history.salaryMovement.map((item, index) => {
           if (index % 2 === 0) {
             return (
               <li key={index}>

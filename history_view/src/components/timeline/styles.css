@@ -25,11 +25,11 @@
   position: absolute;
   top: -5px;
   left: 48%;
-  z-index: 2;
 }
 
 .container ol li span:nth-child(2n + 1) {
   background-color: green;
+  z-index: 100;
 }
 
 .span-top:before {

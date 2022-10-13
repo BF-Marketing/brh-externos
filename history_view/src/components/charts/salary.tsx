@@ -1,31 +1,50 @@
 import Chart from 'react-apexcharts'
 
 type salaryChartProps = {
-  data?: { event: string; label: string; year: number; icon: string }[]
+  data: {
+    event: string
+    label: string
+    year: number
+    icon: string
+    value: number
+  }[]
 }
 export const SalaryChart = ({ data }: salaryChartProps) => {
+  let year = data.map((arr) => arr.year)
+  let value = data.map((arr) => arr.value)
+  console.log(year, value)
   let options = {
     chart: {
-      id: 'apexchart-example',
+      id: 'basic-bar',
     },
     xaxis: {
-      categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
+      categories: year,
     },
     series: [
       {
-        name: 'series-1',
-        data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
+        name: 'salary',
+        data: value,
       },
     ],
+    markers: {
+      size: 5,
+      colors: ['#E91E63', '#E91E63'],
+    },
+    colors: ['#eee', '#eee'],
+    toolbar: {
+      show: false,
+    },
   }
 
   return (
-    <Chart
-      options={options}
-      series={options.series}
-      type="line"
-      width={500}
-      height={320}
-    />
+    <div className="container">
+      <Chart
+        options={options}
+        series={options.series}
+        type="line"
+        width={600}
+        height={320}
+      />
+    </div>
   )
 }

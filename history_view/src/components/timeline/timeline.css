@@ -1,0 +1,153 @@
+.timeline-content {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.timeline {
+  background: white;
+  width: 80%;
+  max-width: 900px;
+}
+.timeline ol {
+  position: relative;
+  margin: 120px 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline ol li {
+  min-width: 80px;
+  min-height: 80px;
+  position: relative;
+}
+
+.timeline ol li span {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.timeline ol li::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #aaa;
+  position: absolute;
+  top: 46%;
+}
+
+.timeline ol li:first-child::after {
+  content: '';
+  width: 50%;
+  height: 2px;
+  background: #aaa;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+}
+
+.timeline ol li:last-child::after {
+  content: '';
+  width: 50%;
+  height: 2px;
+  background: rgb(170, 170, 170);
+  position: absolute;
+  top: 46%;
+}
+
+.sp-line-bot {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(21, 221, 41);
+  position: absolute;
+  top: 45%;
+  left: 48%;
+}
+
+.img-handler {
+  bottom: 0;
+  margin-bottom: 85px;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-handler:before {
+  content: '';
+  width: 1px;
+  height: 55px;
+  background: #aaa;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
+.img-handler img {
+  width: 3rem;
+  margin-top: 10px;
+}
+
+.img-handler span {
+  font-weight: 500;
+}
+
+p {
+  text-align: center;
+  font-size: 1em;
+  width: 100%;
+}
+
+.ps-bot {
+  width: 100%;
+}
+
+.ps-bot-bot {
+  width: 100%;
+  margin-top: 150px;
+}
+
+.ps-bot-bot::after {
+  content: '';
+  width: 1px;
+  height: 110px;
+  background: rgb(170, 170, 170);
+  position: absolute;
+  top: 47%;
+  right: 49%;
+}
+
+.timeline-content .contract-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.contract-time .n-year {
+  background-color: green;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 20px;
+  padding: 0.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1em;
+}
+
+.contract-time .sp-label {
+  font-size: 1.1em;
+}

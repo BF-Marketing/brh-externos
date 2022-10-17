@@ -1,18 +1,20 @@
 import { icons } from '../../App'
 import './timeline.css'
 
+type eventProps = {
+  event: string
+  type: string
+  description: string
+  salary: number
+  year: number
+}
+
 type timelineProps = {
   history: {
     name: string
     admissionDate: Date
     birthDay: Date
-    events: {
-      event: string
-      type: string
-      description: string
-      salary: number
-      year: number
-    }[]
+    events: eventProps[]
   }
 }
 
@@ -35,12 +37,32 @@ const elapsedTime = (date: Date) => {
 
 export const Timeline = ({ history }: timelineProps) => {
   const contractTime = elapsedTime(history.admissionDate)
+  const eventsData = history.events
+  const preexistingElements = 6 - eventsData.length
+
+  let events: eventProps[] = []
+
+  if (preexistingElements > 0) {
+    events = [
+      ...Array(preexistingElements).fill({
+        event: '',
+        type: '',
+        description: '',
+        salary: '',
+        year: '',
+      }),
+    ]
+  }
+
+  if (eventsData.length > 0) {
+    events = eventsData.concat(events)
+  }
 
   return (
     <div className="timeline-content">
       <div className="timeline">
         <ol>
-          {history.events.map((item, index) => {
+          {events.map((item, index) => {
             if (index % 2 === 0) {
               return (
                 <li key={index}>

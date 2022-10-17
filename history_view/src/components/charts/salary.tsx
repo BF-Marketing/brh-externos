@@ -21,14 +21,22 @@ export const SalaryChart = ({ data }: salaryChartProps) => {
   let values = data.events.map((arr) => arr.salary)
   let options = {
     chart: {
-      id: 'basic-bar',
+      width: '100%',
+      height: 380,
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      width: 1,
+      colors: ['#fff'],
     },
     xaxis: {
       categories: year,
     },
     series: [
       {
-        name: 'salary',
+        name: 'salary', // rever
         data: values,
       },
     ],
@@ -47,13 +55,15 @@ export const SalaryChart = ({ data }: salaryChartProps) => {
       <p className="salary-section-title">
         Evolução Salarial de {<span>{data.name}</span>}
       </p>
-      <Chart
-        options={options}
-        series={options.series}
-        type="line"
-        width={'100%'}
-        height={320}
-      />
+      <div className="chart">
+        <Chart
+          options={options}
+          series={options.series}
+          type="line"
+          height={300}
+          width={'100%'}
+        />
+      </div>
     </div>
   )
 }

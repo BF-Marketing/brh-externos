@@ -1,6 +1,7 @@
 .timeline-content {
   width: 100%;
   max-width: 900px;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,8 +22,19 @@
   justify-content: center;
 }
 
+/* linha horizontal */
+.timeline ol::after {
+  content: '';
+  width: 73%;
+  height: 2px;
+  background: #aaa;
+  position: absolute;
+  top: 46%;
+}
+
+/* eventos */
 .timeline ol li {
-  min-width: 80px;
+  width: 7rem;
   min-height: 80px;
   position: relative;
 }
@@ -86,7 +98,7 @@
   content: '';
   width: 1px;
   height: 55px;
-  background: #aaa;
+  background: rgba(170, 170, 170, 0.472);
   position: absolute;
   top: 30%;
   left: 50%;
@@ -99,11 +111,12 @@
 
 .img-handler span {
   font-weight: 500;
+  font-size: 1em;
 }
 
 p {
   text-align: center;
-  font-size: 1em;
+  font-size: 0.9em;
   width: 100%;
 }
 
@@ -120,7 +133,7 @@ p {
   content: '';
   width: 1px;
   height: 110px;
-  background: rgb(170, 170, 170);
+  background: rgba(170, 170, 170, 0.472);
   position: absolute;
   top: 47%;
   right: 49%;

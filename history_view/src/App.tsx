@@ -12,8 +12,7 @@ function App() {
     <Fragment>
       <div className="container">
         <Timeline history={data} />
-      </div>
-      <div className="container">
+
         <SalaryChart data={data} />
       </div>
     </Fragment>
@@ -51,6 +50,13 @@ const data = {
     {
       event: 'Casamento',
       type: 'wedding',
+      description: 'Mudança de função',
+      salary: 6000,
+      year: 2025,
+    },
+    {
+      event: 'Analista Pleno',
+      type: 'promotion',
       description: 'Mudança de função',
       salary: 6000,
       year: 2025,

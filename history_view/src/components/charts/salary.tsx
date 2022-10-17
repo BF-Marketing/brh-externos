@@ -16,6 +16,26 @@ type salaryChartProps = {
   }
 }
 
+// legend: {
+//   show: true,
+//   showForSingleSeries: false,
+//   showForNullSeries: true,
+//   showForZeroSeries: true,
+//   position: 'bottom',
+//   horizontalAlign: 'center',
+//   floating: false,
+//   fontSize: '14px',
+//   fontFamily: 'Helvetica, Arial',
+//   fontWeight: 400,
+//   formatter: undefined,
+//   inverseOrder: false,
+//   width: undefined,
+//   height: undefined,
+//   tooltipHoverFormatter: undefined,
+//   customLegendItems: [],
+//   offsetX: 0,
+//   offsetY: 0,
+
 export const SalaryChart = ({ data }: salaryChartProps) => {
   let year = data.events.map((arr) => arr.year)
   let values = data.events.map((arr) => arr.salary)
@@ -23,6 +43,9 @@ export const SalaryChart = ({ data }: salaryChartProps) => {
     chart: {
       width: '100%',
       height: 380,
+      toolbar: {
+        show: false,
+      },
     },
     dataLabels: {
       enabled: false,
@@ -32,7 +55,41 @@ export const SalaryChart = ({ data }: salaryChartProps) => {
       colors: ['#fff'],
     },
     xaxis: {
+      name: 'anos',
       categories: year,
+      legend: {
+        position: 'bottom',
+        horizontalAlign: 'right',
+      },
+      title: {
+        text: 'Tempo',
+        rotate: -90,
+        offsetX: 0,
+        offsetY: 0,
+        style: {
+          fontSize: '12px',
+          fontFamily: 'Helvetica, Arial, sans-serif',
+          cssClass: 'apexcharts-xaxis-title',
+        },
+      },
+    },
+    yaxis: {
+      categories: year,
+      legend: {
+        position: 'bottom',
+        horizontalAlign: 'right',
+      },
+      title: {
+        text: 'Salário($)',
+        rotate: -90,
+        offsetX: 0,
+        offsetY: 0,
+        style: {
+          fontSize: '12px',
+          fontFamily: 'Helvetica, Arial, sans-serif',
+          cssClass: 'apexcharts-yaxis-title',
+        },
+      },
     },
     series: [
       {

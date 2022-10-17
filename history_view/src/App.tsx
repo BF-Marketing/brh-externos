@@ -12,7 +12,6 @@ function App() {
     <Fragment>
       <div className="container">
         <Timeline history={data} />
-
         <SalaryChart data={data} />
       </div>
     </Fragment>

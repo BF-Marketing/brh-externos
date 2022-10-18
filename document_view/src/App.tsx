@@ -1,14 +1,16 @@
-import { useMemo } from 'react'
-import textExample from './assets/documento.txt'
+import { useMemo, useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
 import { CgFileDocument } from 'react-icons/cg'
 import { MdDownloadForOffline } from 'react-icons/md'
-import './App.css'
+import { IoIosAddCircleOutline } from 'react-icons/io'
+import { data } from './data'
+import { AddDocument } from './components/addDocument'
 
 function App() {
-  const columns = useMemo(
-    () => ['Documento', 'Última Modificação', 'Data de Validade', 'Baixar'],
-    []
-  )
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
 
   const descriptionDocument = (name: string, label: string) => {
     return (
@@ -74,6 +76,12 @@ function App() {
     )
   }
 
+  // lista de elementos da tabela:
+  const columns = useMemo(
+    () => ['Documento', 'Última Modificação', 'Data de Validade', 'Baixar'],
+    []
+  )
+
   const rows = useMemo(
     () =>
       data.map(
@@ -94,84 +102,70 @@ function App() {
   )
 
   return (
-    <table style={{ width: '100%', margin: 0 }} className="">
-      <thead>
-        <tr>
-          {columns.map((column, index) => {
+    <div>
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'right',
+          marginBottom: '24px',
+        }}
+      >
+        <button
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '5px',
+            background: 'white',
+            boxShadow: '0px 0px 10px -6px rgba(0,0,0,0.75)',
+          }}
+          onClick={handleShow}
+        >
+          <IoIosAddCircleOutline color="green" />
+          <p
+            style={{
+              margin: 0,
+            }}
+          >
+            Adicionar documento
+          </p>
+        </button>
+      </div>
+      <table style={{ width: '100%', margin: 0 }} className="">
+        <thead>
+          <tr>
+            {columns.map((column, index) => {
+              return (
+                <th
+                  style={{
+                    color: '#bbb',
+                    fontWeight: 'normal',
+                  }}
+                  scope="col"
+                  key={index}
+                >
+                  {column}
+                </th>
+              )
+            })}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, index) => {
             return (
-              <th
-                style={{
-                  color: 'gray',
-                  fontWeight: 'normal',
-                }}
-                scope="col"
-                key={index}
-              >
-                {column}
-              </th>
+              <tr key={index}>
+                <td scope="row">{row.description}</td>
+                <td scope="row">{row.lastModified}</td>
+                <td scope="row">{row.validity}</td>
+                <td scope="row">{row.download}</td>
+              </tr>
             )
           })}
-        </tr>
-      </thead>
-      <tbody>
-        {rows.map((row, index) => {
-          return (
-            <tr key={index}>
-              <td scope="row">{row.description}</td>
-              <td scope="row">{row.lastModified}</td>
-              <td scope="row">{row.validity}</td>
-              <td scope="row">{row.download}</td>
-            </tr>
-          )
-        })}
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+      <AddDocument handleClose={handleClose} show={show} />
+    </div>
   )
 }
 
 export default App
-
-const data = [
-  {
-    name: 'Documento de Identificação',
-    label: '(Bi/Passaporte Estrangeiro)',
-    lastModification: new Date('2022-09-10'),
-    validityTime: 1, // 1 mês
-    path: textExample,
-  },
-  {
-    name: 'Documento de Identificação',
-    label: '(Bi/Passaporte Estrangeiro)',
-    lastModification: new Date('2022-09-07'),
-    validityTime: 12, // 12 meses
-    path: textExample,
-  },
-  {
-    name: 'Documento de Identificação',
-    label: '(Bi/Passaporte Estrangeiro)',
-    lastModification: new Date('2022-09-10'),
-    validityTime: 12, // 12 meses
-    path: textExample,
-  },
-  {
-    name: 'Documento de Identificação',
-    label: '(Bi/Passaporte Estrangeiro)',
-    lastModification: new Date('2022-09-20'),
-    validityTime: 6, // 6 meses
-    path: textExample,
-  },
-  {
-    name: 'Documento de Identificação',
-    label: '(Bi/Passaporte Estrangeiro)',
-    lastModification: new Date('2022-09-30'),
-    validityTime: 6, // 6 meses
-    path: textExample,
-  },
-  {
-    name: 'Documento de Identificação',
-    label: '(Bi/Passaporte Estrangeiro)',
-    lastModification: new Date('2022-09-05'),
-    validityTime: 12, // 12 meses
-    path: textExample,
-  },
-]

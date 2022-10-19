@@ -1,0 +1,147 @@
+.modal:first-child {
+  top: 15rem;
+  left: 12rem;
+  height: 33rem;
+  width: 75%;
+  border-radius: 20px;
+  border: 3px solid rgb(97, 205, 224);
+}
+
+.modal .modal-content {
+  background-color: #eee;
+  color: rgb(45, 45, 45);
+}
+
+.modal .modal-header {
+  padding: 0 2.5rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.modal-header .header-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.modal-header .header-small {
+  font-size: small;
+  color: #aaa;
+}
+
+.form-field {
+  margin-bottom: 0.8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: 14px;
+  align-self: flex-start;
+}
+
+.modal .modal-body {
+  padding: 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modal-body select {
+  border-radius: 20px;
+}
+
+.modal-body .btn-file-document input[type='file'] {
+  display: none;
+}
+
+.modal-body .btn-file-document small {
+  color: #aaa;
+}
+
+.modal-body .btn-file-document {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 6rem;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modal-body .btn-file-image input[type='file'] {
+  display: none;
+}
+.modal-body .btn-file-image {
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  background-color: rgb(13, 167, 85);
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.form-field-date {
+  margin-bottom: 0.8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-field-date label {
+  align-self: center;
+}
+
+.modal-body input[type='date'] {
+  font-weight: bold;
+  border-radius: 20px;
+  width: 52%;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-footer .form-btn-submit {
+  background-color: rgb(13, 167, 85);
+  border-radius: 50px;
+  height: 2rem;
+  width: 8rem;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.form-btn-submit:hover {
+  opacity: 0.8;
+}
+
+.modal-footer .form-btn-cancel {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.form-btn-cancel:hover {
+  opacity: 0.8;
+}
+
+.form-btn-cancel:active {
+  color: red;
+}

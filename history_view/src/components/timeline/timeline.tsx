@@ -1,4 +1,4 @@
-import { icons } from '../../App'
+import { icons } from '../../assets/icons'
 import './timeline.css'
 
 type eventProps = {

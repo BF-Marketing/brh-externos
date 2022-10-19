@@ -9,7 +9,7 @@ type Props = {
 export const AddDocument = ({ handleClose, show }: Props) => {
   return (
     <Modal show={show} onHide={handleClose} backdrop="static">
-      <Modal.Header closeButton>
+      <Modal.Header>
         <div>
           <h5>Adicionar documento</h5>
           <small>Adicione o documento do colaborador</small>

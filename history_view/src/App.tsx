@@ -1,8 +1,4 @@
 import { Timeline } from './components/timeline/timeline'
-import wedding from './assets/wedding.png'
-import admission from './assets/admission.png'
-import transition from './assets/transition.png'
-import promotion from './assets/promotion.png'
 import { SalaryChart } from './components/charts/salary'
 import { Fragment } from 'react'
 import './App.styles.css'
@@ -33,15 +29,8 @@ const data = {
       year: 2022,
     },
     {
-      event: 'Analista II',
-      type: 'promotion',
-      description: 'Contraiu o Matrimonio',
-      salary: 3000,
-      year: 2023,
-    },
-    {
       event: 'QA Pleno',
-      type: 'transition',
+      type: 'changeOfRole',
       description: 'Promoção',
       salary: 7000,
       year: 2024,
@@ -55,24 +44,24 @@ const data = {
     },
     {
       event: 'Analista Pleno',
-      type: 'promotion',
+      type: 'endOfPeriod',
       description: 'Mudança de função',
       salary: 6000,
       year: 2025,
     },
     {
-      event: 'Analista Pleno',
+      event: 'Analista II',
       type: 'promotion',
+      description: 'Contraiu o Matrimonio',
+      salary: 3000,
+      year: 2023,
+    },
+    {
+      event: 'Analista Pleno',
+      type: 'childBirth',
       description: 'Mudança de função',
       salary: 6000,
       year: 2025,
     },
   ],
-}
-
-export const icons: any = {
-  promotion: promotion,
-  wedding: wedding,
-  admission: admission,
-  transition: transition,
 }

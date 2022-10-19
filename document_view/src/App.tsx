@@ -14,32 +14,10 @@ function App() {
 
   const descriptionDocument = (name: string, label: string) => {
     return (
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'flex-start',
-          margin: '5px',
-        }}
-        className=""
-      >
-        <CgFileDocument
-          style={{
-            marginTop: '10px',
-          }}
-          color="green"
-        />
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            margin: '5px',
-          }}
-          className=""
-        >
-          <h5 style={{ display: 'inline-block', margin: 0 }} className="">
-            {name}
-          </h5>
+      <div className="document-description">
+        <CgFileDocument color="#51bd9c" />
+        <div className="title">
+          <h5>{name}</h5>
           <small>{label}</small>
         </div>
       </div>
@@ -47,10 +25,10 @@ function App() {
   }
 
   const modifiedDocument = (date: Date) => {
-    let day = date.getDay() + 1 < 10 ? '0' + date.getDay() : date.getDay()
-    let month = date.getMonth()
+    let day = date.getDay() + 1 < 10 ? `0${date.getDay()}` : date.getDay()
+    let month = date.getMonth() < 10 ? `0${date.getMonth()}` : date.getMonth()
     let year = date.getFullYear()
-    return <p>{`${day}/${month}/${year}`}</p>
+    return <p className="p-date">{`${day}/${month}/${year}`}</p>
   }
 
   const validityDocument = (modifiedDate: Date, validityTime: number) => {
@@ -59,16 +37,18 @@ function App() {
     )
 
     let day =
-      validityAt.getDay() < 10 ? '0' + validityAt.getDay() : validityAt.getDay()
-    let month = validityAt.getMonth()
+      validityAt.getDay() < 10 ? `0${validityAt.getDay()}` : validityAt.getDay()
+    let month =
+      validityAt.getMonth() < 10
+        ? `0${validityAt.getMonth()}`
+        : validityAt.getMonth()
     let year = validityAt.getFullYear()
-    console.log(`${day}/${month}/${year}`)
-    return <p>{`${day}/${month}/${year}`}</p>
+    return <p className="p-date">{`${day}/${month}/${year}`}</p>
   }
 
   const downloadDocument = (path: string) => {
     return (
-      <button>
+      <button className="btn-download">
         <a href={path} download>
           <MdDownloadForOffline color="white" />
         </a>
@@ -102,48 +82,19 @@ function App() {
   )
 
   return (
-    <div>
-      <div
-        style={{
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'right',
-          marginBottom: '24px',
-        }}
-      >
-        <button
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '5px',
-            background: 'white',
-            boxShadow: '0px 0px 10px -6px rgba(0,0,0,0.75)',
-          }}
-          onClick={handleShow}
-        >
+    <div className="container">
+      <div className="add-document-btn">
+        <button onClick={handleShow}>
           <IoIosAddCircleOutline color="green" />
-          <p
-            style={{
-              margin: 0,
-            }}
-          >
-            Adicionar documento
-          </p>
+          <p>Adicionar documento</p>
         </button>
       </div>
-      <table style={{ width: '100%', margin: 0 }} className="">
+      <table>
         <thead>
           <tr>
             {columns.map((column, index) => {
               return (
-                <th
-                  style={{
-                    color: '#bbb',
-                    fontWeight: 'normal',
-                  }}
-                  scope="col"
-                  key={index}
-                >
+                <th scope="col" key={index}>
                   {column}
                 </th>
               )

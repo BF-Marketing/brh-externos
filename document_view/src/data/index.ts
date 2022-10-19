@@ -4,7 +4,7 @@ export const data = [
   {
     name: 'Documento de Identificação',
     label: '(Bi/Passaporte Estrangeiro)',
-    lastModification: new Date('2022-09-10'),
+    lastModification: new Date('2022-09-12'),
     validityTime: 1, // 1 mês
     path: textExample,
   },
@@ -25,7 +25,7 @@ export const data = [
   {
     name: 'Documento de Identificação',
     label: '(Bi/Passaporte Estrangeiro)',
-    lastModification: new Date('2022-09-20'),
+    lastModification: new Date('2022-09-25'),
     validityTime: 6, // 6 meses
     path: textExample,
   },

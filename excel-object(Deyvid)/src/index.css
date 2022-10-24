@@ -1,0 +1,35 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: PoppinsRegular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    /* font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+}
+html, body {
+    height: 100%;
+    background-color: #2e2e2e;
+}
+.App{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auto_reader {
+    border-radius: 15px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--green);
+    box-shadow: 0 4px 8px 0 rgba(24, 93, 59, 0.2);
+    padding: 5px 15px;
+    font-weight: bold;
+}
+#file_input_ocr{
+    display: none;
+}

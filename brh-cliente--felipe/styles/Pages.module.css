@@ -1,0 +1,62 @@
+.greeting {
+  margin-bottom: 2rem;
+}
+
+.greeting h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.greeting p {
+  font-size: 2em;
+  line-height: 0.5em;
+}
+
+.dashboards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.dash {
+  position: relative;
+  width: 22rem;
+  height: 12rem;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+}
+
+.dash h4 {
+  font-size: 1.6em;
+  color: #ffffff;
+}
+
+.dash p {
+  font-size: 1.6em;
+  color: #ffffff;
+}
+
+.dash::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 15%;
+  right: -15%;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #ffffff2c;
+}
+
+.dash::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -5%;
+  right: -30%;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #ffffff2c;
+}

@@ -4,12 +4,7 @@ import styles from '../styles/Pages.module.css'
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>BRH Cliente | Home</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <section className={styles['home-page']}>
       <div className={styles.greeting}>
         <h1>Bom dia, Teste!</h1>
         <p>Seja bem-vindo</p>
@@ -23,6 +18,6 @@ export default function Home() {
         />
         <CardButton title={'Estado'} color={'#943d8a'} label={'Activo'} />
       </div>
-    </>
+    </section>
   )
 }

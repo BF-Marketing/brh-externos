@@ -11,10 +11,10 @@ export const Header = () => {
       <div className={styles.header}>
         <div className={styles.logo}>
           <Image
-            src="/assets/logo-brh-client.png"
+            src="/assets/logo-brh-software.png"
             alt="profile"
             width={220}
-            height={220}
+            height={25}
           />
         </div>
         <div className={styles['nav-tools']}>

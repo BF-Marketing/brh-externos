@@ -1,7 +1,3 @@
-.wrapper {
-  margin: 0;
-  padding: 3rem 5rem;
-}
 .grid-header {
   grid-area: header;
 }
@@ -18,7 +14,7 @@
   display: grid;
   grid-template-areas:
     'header header header header header header'
-    'menu main main main main main';
+    'menu main  main main main main';
 }
 
 /* HEADER */
@@ -127,6 +123,11 @@
   align-items: center;
   justify-content: start;
   gap: 10px;
+  transition: color 0.5s ease;
+}
+
+item .a:hover:active {
+  color: red;
 }
 
 .item a svg {

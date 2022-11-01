@@ -1,28 +1,5 @@
-import Head from 'next/head'
-import styles from '../styles/Global.module.css'
+import styles from '../styles/Pages.module.css'
 
 export default function Support() {
-  return (
-    <>
-      <Head>
-        <title>BRH Cliente | Suporte Técnico</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <div className={styles.greeting}>
-        <h1>Bom dia, Teste!</h1>
-        <p>Seja bem-vindo</p>
-      </div>
-      <div className={styles.dashboards}>
-        <div className={styles.dash}>
-          <h1>Plano actual</h1>
-          <p>Bronze</p>
-        </div>
-        <div className={styles.dash}>
-          <h1>Data de vencimento</h1>
-          <p>08/01/2023</p>
-        </div>
-      </div>
-    </>
-  )
+  return <section className={styles['support-page']}>Suporte Técnico</section>
 }

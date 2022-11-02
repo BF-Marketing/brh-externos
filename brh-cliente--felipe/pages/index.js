@@ -5,7 +5,7 @@ import styles from '../styles/Pages.module.css'
 export default function Home() {
   return (
     <section className={styles['home-page']}>
-      <div className={styles.greeting}>
+      <div className={styles['page-title-left']}>
         <h1>Bom dia, Teste!</h1>
         <p>Seja bem-vindo</p>
       </div>

@@ -4,8 +4,12 @@ import Badge from '@mui/material/Badge'
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'
 import styles from '../styles/Global.module.css'
+import { useState } from 'react'
 
 export const Header = () => {
+  const [notifications, setNotifications] = useState(1)
+  const [messages, setMessages] = useState(0)
+
   return (
     <header className={styles['grid-header']}>
       <div className={styles.header}>
@@ -18,18 +22,18 @@ export const Header = () => {
           />
         </div>
         <div className={styles['nav-tools']}>
-          <ul className={styles['right-side']}>
+          <ul>
             <li className={styles.li}>
               <Link href="/">
-                <Badge badgeContent={0} color="error">
-                  <NotificationsNoneIcon sx={{ fontSize: 30 }} color="action" />
+                <Badge badgeContent={notifications} color="error">
+                  <NotificationsNoneIcon sx={{ fontSize: 25 }} color="action" />
                 </Badge>
               </Link>
             </li>
             <li className={styles.li}>
               <Link href="/">
-                <Badge badgeContent={1} color="error">
-                  <MailOutlineIcon sx={{ fontSize: 30 }} color="action" />
+                <Badge badgeContent={messages} color="error">
+                  <MailOutlineIcon sx={{ fontSize: 25 }} color="action" />
                 </Badge>
               </Link>
             </li>
@@ -43,9 +47,7 @@ export const Header = () => {
                     height={40}
                     className={styles['profile-pic']}
                   />
-                  <div className={styles['profile-name']}>
-                    <p>Ricardo Dos Santos</p>
-                  </div>
+                  <p className={styles['profile-name']}>Ricardo Dos Santos</p>
                 </div>
               </Link>
             </li>

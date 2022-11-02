@@ -6,9 +6,7 @@ const Layout = ({ children }) => {
   return (
     <div className={styles['grid-container']}>
       <Header />
-      <main className={`${styles['grid-main']} ${styles.wrapper}`}>
-        {children}
-      </main>
+      <main className={styles['grid-main']}>{children}</main>
       <Menu />
     </div>
   )

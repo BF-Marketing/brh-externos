@@ -1,3 +1,23 @@
+/* PAGE TITLES */
+
+.page-title-left {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.page-title-left h1 {
+  font-size: 2.8em;
+  font-weight: bolder;
+  margin-bottom: 12px;
+  line-height: 1em;
+}
+
+.page-title-left p {
+  padding-left: 3px;
+  font-size: 1.4em;
+  line-height: 0.3em;
+}
+
 /* HOME */
 
 .home-page {
@@ -6,21 +26,6 @@
   height: 100vw;
   padding: 3rem 5rem;
   background-color: #ffffff;
-}
-
-.greeting {
-  margin-bottom: 2rem;
-}
-
-.greeting h1 {
-  font-size: 2.5em;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.greeting p {
-  font-size: 2em;
-  line-height: 0.5em;
 }
 
 .dashboards {
@@ -71,22 +76,21 @@
   background-color: #ffffff2c;
 }
 
-.page-title {
-  text-align: center;
-  margin-bottom: 10rem;
-}
-
-.page-title h1 {
-  font-size: 32px;
-}
-
 /* PLANOS */
-
 .plans-page {
   padding: 3rem;
   width: 100%;
   height: 100vw;
   background-color: #eeeeee5d;
+}
+
+.page-title-center {
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.page-title-center h1 {
+  font-size: 32px;
 }
 
 .plans {
@@ -101,9 +105,8 @@
 }
 
 .card-plan {
-  width: 400px;
-  max-width: 210px;
-  height: 250px;
+  max-width: 200px;
+  height: 270px;
   border-radius: 5%;
   padding: 20px;
   text-align: center;
@@ -116,7 +119,7 @@
 .card-plan h4 {
   font-size: 16px;
   text-transform: capitalize;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .value-plan {
@@ -137,14 +140,15 @@
   display: block;
   font-weight: bold;
   opacity: 0.8;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .label-plan {
+  height: 38px;
   font-size: 12px;
   font-weight: bold;
   opacity: 0.8;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .card-plan a {
@@ -162,4 +166,86 @@
 
 .active-plan {
   border: 2px solid #1dbf79;
+}
+
+/* SUPORTE TÉCNICO */
+.support-page {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100vw;
+  padding: 3rem 5rem;
+  background-color: #eeeeee5d;
+}
+
+.support-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+  gap: 2rem;
+}
+
+.form-group {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.support-form select {
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+  height: 35px;
+  border: none;
+  box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.04);
+}
+
+.support-form textarea {
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  min-height: 12rem;
+  resize: none;
+  border: none;
+  box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.form-buttons button[type='submit'] {
+  background-color: #1dbf79;
+  color: #ffffff;
+}
+
+.form-buttons button[type='reset'] {
+  background-color: #acadac;
+  color: #ffffff;
+}
+
+.contact-sup {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 5%;
+  text-align: center;
+}
+
+.contact-sup span {
+  color: #1dbf79;
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
 }

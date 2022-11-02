@@ -4,10 +4,10 @@ import styles from '../styles/Global.module.css'
 
 const Layout = ({ children }) => {
   return (
-    <div className={styles['grid-container']}>
+    <div className={styles.container}>
       <Header />
-      <main className={styles['grid-main']}>{children}</main>
       <Menu />
+      <main className={styles['main']}>{children}</main>
     </div>
   )
 }

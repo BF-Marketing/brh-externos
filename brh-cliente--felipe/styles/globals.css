@@ -1,3 +1,9 @@
+:root {
+  --size-text: clamp(1em, 1em + 1vw, 1.5em);
+  --size-nav: clamp(1em, 1.5em + 1vw, 1.5em);
+  --size-title: clamp(1em, 1em + 1vw, 1.5em);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

@@ -11,7 +11,7 @@ export const Header = () => {
   const [messages, setMessages] = useState(0)
 
   return (
-    <header className={styles['grid-header']}>
+    <header>
       <div className={styles.header}>
         <div className={styles.logo}>
           <Image

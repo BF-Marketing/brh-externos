@@ -14,7 +14,7 @@ export const Menu = () => {
     router.pathname == routename ? styles.active : ''
 
   return (
-    <aside className={styles['grid-menu']}>
+    <aside>
       <div className={styles.aside}>
         <nav className={styles.nav}>
           <div className={`${styles.item} ${selectedRoute('/')}`}>

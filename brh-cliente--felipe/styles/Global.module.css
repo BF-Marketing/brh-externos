@@ -57,7 +57,7 @@
 
 .profile-name {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .item a {
-  padding: 1.5rem 1.5rem;
+  padding: 1.3rem 1.5rem;
   border-radius: 40px;
   color: #ffffff;
   background-color: transparent;
@@ -96,11 +96,11 @@
   align-items: center;
   justify-content: start;
   gap: 10px;
-  transition: color 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
-item .a:hover:active {
-  color: red;
+.item a:hover {
+  opacity: 0.8;
 }
 
 .item a svg {

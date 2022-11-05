@@ -1,11 +1,11 @@
 /* PAGE TITLES */
 
-.page-title-left {
+.page-title {
   margin-bottom: 2rem;
   text-align: left;
 }
 
-.page-title-left h1 {
+.page-title h1 {
   font-size: 2.8em;
   font-weight: bolder;
   margin-bottom: 12px;
@@ -23,10 +23,8 @@
 .home-page {
   width: 100%;
   height: 100%;
-  margin: 0;
   padding: 3rem 5rem;
   background-color: #ffffff;
-  border: solid 1px black;
 }
 
 .dashboards {
@@ -81,18 +79,13 @@
 .plans-page {
   width: 100%;
   height: 100%;
-  padding: 3rem;
+  padding: 3rem 5rem;
   background-color: #eeeeee5d;
-  border: solid 1px black;
 }
 
-.page-title-center {
+.plans-page h1 {
   text-align: center;
   margin-bottom: 10rem;
-}
-
-.page-title-center h1 {
-  font-size: 32px;
 }
 
 .plans {
@@ -261,7 +254,6 @@
   margin: 0;
   padding: 3rem 5rem;
   background-color: #eeeeee5d;
-  border: solid 1px black;
 }
 
 .payments-actions {

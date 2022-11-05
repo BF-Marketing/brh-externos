@@ -7,7 +7,7 @@ import { paymentPointer, payments } from './api/data'
 export default function Payments() {
   return (
     <section className={styles['payments-page']}>
-      <div className={styles['page-title-left']}>
+      <div className={styles['page-title']}>
         <h1>Meus Pagamentos</h1>
         <p>Lista com todos os pagamentos</p>
       </div>

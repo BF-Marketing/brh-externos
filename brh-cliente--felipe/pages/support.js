@@ -3,7 +3,7 @@ import styles from '../styles/Pages.module.css'
 export default function Support() {
   return (
     <section className={styles['support-page']}>
-      <div className={styles['page-title-left']}>
+      <div className={styles['page-title']}>
         <h1>Suporte Técnico</h1>
         <p>Solucione o seu problema</p>
         <form className={styles['support-form']}>

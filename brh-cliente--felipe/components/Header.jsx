@@ -16,9 +16,9 @@ export const Header = () => {
         <div className={styles.logo}>
           <Image
             src="/assets/logo-brh-software.png"
-            alt="profile"
-            width={220}
-            height={25}
+            alt="logo"
+            width={215}
+            height={22}
           />
         </div>
         <div className={styles['nav-tools']}>

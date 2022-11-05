@@ -1,3 +1,9 @@
+import {
+  BsCheckCircleFill,
+  BsFillXCircleFill,
+  BsRecordCircleFill,
+} from 'react-icons/bs'
+
 export const plans = [
   {
     title: 'plano básico',
@@ -21,3 +27,33 @@ export const plans = [
     status: false,
   },
 ]
+
+export const payments = [
+  {
+    plano: 'Plano básico',
+    value: '30.000,00 kzs',
+    lastPayment: '21/05/2023',
+    nextPayment: '21/08/2023',
+    status: 'ok',
+  },
+  {
+    plano: 'Plano standard',
+    value: '60.000,00 kzs',
+    lastPayment: '22/06/2023',
+    nextPayment: '21/12/2023',
+    status: 'warning',
+  },
+  {
+    plano: 'Plano platina',
+    value: '60.000,00 kzs',
+    lastPayment: '22/06/2023',
+    nextPayment: '22/12/2023',
+    status: 'attention',
+  },
+]
+
+export const paymentPointer = {
+  ok: <BsCheckCircleFill color="#1dbf79" />,
+  attention: <BsRecordCircleFill color="#ffbe40" />,
+  warning: <BsFillXCircleFill color="#ff4242" />,
+}

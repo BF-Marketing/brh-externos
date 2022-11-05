@@ -2,9 +2,8 @@ import Link from 'next/link'
 import styles from '../styles/Global.module.css'
 import { RiDashboardLine } from 'react-icons/ri'
 import { AiOutlineRocket } from 'react-icons/ai'
-import { MdManageAccounts } from 'react-icons/md'
+import { MdManageAccounts, MdOutlinePayments } from 'react-icons/md'
 import { BsListCheck } from 'react-icons/bs'
-import { MdOutlinePayments } from 'react-icons/md'
 import { useRouter } from 'next/router'
 
 export const Menu = () => {

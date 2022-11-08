@@ -13,6 +13,7 @@ export default function PlanDetails() {
     <section className={`${styles['plans-page']} ${styles['plan-details']}`}>
       <div className={styles['page-title']}>
         <h1>{planData.title}</h1>
+        <p>{planData.label}</p>
       </div>
       <div className={styles.plans}>
         <CardPlan>{planData}</CardPlan>

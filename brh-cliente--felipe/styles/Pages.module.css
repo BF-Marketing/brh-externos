@@ -83,7 +83,7 @@
   background-color: #eeeeee5d;
 }
 
-.plans-page h1 {
+.plans-page .page-title {
   text-align: center;
   margin-bottom: 10rem;
 }
@@ -166,14 +166,20 @@
 
 /* DETALHES DO PLANO */
 
-.plan-details h1 {
+.plan-details .page-title {
   text-align: left;
   margin-bottom: 10rem;
   text-transform: capitalize;
 }
+
+.plan-details .page-title p {
+  font-size: 14px;
+}
+
 .plan-details .active-plan {
   border: none;
 }
+
 .plan-details .card-plan {
   max-width: 400px;
   height: 360px;

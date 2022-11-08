@@ -115,6 +115,7 @@
   font-size: 16px;
   text-transform: capitalize;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .value-plan {
@@ -161,6 +162,50 @@
 
 .active-plan {
   border: 2px solid #1dbf79;
+}
+
+/* DETALHES DO PLANO */
+
+.plan-details h1 {
+  text-align: left;
+  margin-bottom: 10rem;
+  text-transform: capitalize;
+}
+.plan-details .active-plan {
+  border: none;
+}
+.plan-details .card-plan {
+  max-width: 400px;
+  height: 360px;
+  padding: 50px;
+}
+
+.plan-details .card-plan h4 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.plan-details .value-plan {
+  font-size: 64px;
+}
+
+.plan-details .value-plan small {
+  font-size: 38px;
+  font-weight: normal;
+}
+
+.plan-details .validity-plan {
+  font-size: 14px;
+}
+
+.plan-details .label-plan {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.plan-details .card-plan a {
+  padding: 17px;
+  font-size: 12px;
 }
 
 /* SUPORTE TÉCNICO */
